@@ -23,4 +23,15 @@ export class VoteDashboardComponent {
     });
   }
 
+
+login() {
+  this.af.auth.login({
+    provider: AuthProviders.Google
+  });
+}
+ 
+logout() {
+  this.af.auth.logout();
+}
+
  }

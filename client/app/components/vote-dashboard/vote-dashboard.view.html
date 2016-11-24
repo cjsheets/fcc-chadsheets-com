@@ -25,11 +25,15 @@
       <p>Enter a search term to see what the API returns.
       </p>
       <button md-raised-button (click)="login()">
-  <img width="30" src="google-logo.png" />Use My Google Account
-</button>
-<button md-raised-button (click)="logout()">
-  Logout
-</button>
+        Use My Google Account
+      </button>
+      <button md-raised-button (click)="logout()">
+        Logout
+      </button>
+    </section>
+<div *ngIf="user">
+  Not Logged In
+</div>
   </section>
     
               <!-- /Reset Indent -->

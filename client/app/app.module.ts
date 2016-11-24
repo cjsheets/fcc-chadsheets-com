@@ -3,15 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Development and debugging interface: in-memory web api
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService }  from './in-memory-data.service';
-
+import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-// import { AngularFireModule, AuthMethods, 
-//   AuthProviders } from "angularfire2";
 
-const config = {
+import { AngularFireModule, AuthMethods, 
+  AuthProviders } from "angularfire2";
+
+const firebaseConfig = {
   apiKey: "AIzaSyCOm8FwfjmIjHqLwpKvMfDCvrv1e58Tkt4",
   authDomain: "fcc-chadsheets-com.firebaseapp.com",
   databaseURL: "https://fcc-chadsheets-com.firebaseio.com",
@@ -27,16 +25,21 @@ import { ImageSearchComponent } from './components/image-search/image-search.com
 import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboard.component';
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-//    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    BrowserModule, FormsModule, HttpModule,
+    RouterModule.forRoot(routes, {
+      useHash: true
+    }),
+    AngularFireModule.initializeApp(firebaseConfig,{
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup
+    })
   ],
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    ImageSearchComponent
+    ImageSearchComponent,
+    VoteDashboardComponent
   ],
   providers: [ ImageSearchService ],
   bootstrap: [ AppComponent ]
