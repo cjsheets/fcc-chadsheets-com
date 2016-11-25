@@ -32,7 +32,10 @@
       </button>
     </section>
 <div *ngIf="user">
-  Not Logged In
+  Not Logged In: {{ userOut() }}
+</div>
+<div *ngIf="! user">
+  Logged In: {{ userOut() }}
 </div>
   </section>
     

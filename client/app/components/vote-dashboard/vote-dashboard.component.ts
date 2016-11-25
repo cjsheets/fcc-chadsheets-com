@@ -26,12 +26,16 @@ export class VoteDashboardComponent {
 
 login() {
   this.af.auth.login({
-    provider: AuthProviders.Google
+    provider: AuthProviders.Facebook
   });
 }
  
 logout() {
   this.af.auth.logout();
+}
+ 
+isLoggedIn() {
+  return Boolean(this.user);
 }
 
  }

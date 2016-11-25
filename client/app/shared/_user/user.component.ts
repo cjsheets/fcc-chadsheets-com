@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.view.html',
-  styleUrls: ['./auth.view.css'],
+  selector: 'app-user',
+  templateUrl: './user.view.html',
+  styleUrls: ['./user.view.css'],
 })
 
-export class AuthComponent implements OnInit {
+export class userComponent implements OnInit {
 
-  private authURL = 'api/search?t=';
+  private userURL = 'api/search?t=';
   private latestURL = 'api/latest';
   searchQuery: string = '';
   searchOffset: number;
   queryString: string = '';
-  apiCallString: string = 'http://' + document.domain + '/' + this.authURL;
+  apiCallString: string = 'http://' + document.domain + '/' + this.userURL;
   responseJSON: [{}];
   latestJSON: [{}];
   responseLoading: boolean = false;
@@ -47,12 +47,12 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.getAuthResults();
+    // this.getuserResults();
     this.latestLoading = true;
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred - auth.component', error); // Needs to be improved
+    console.error('An error occurred - user.component', error); // Needs to be improved
     return Promise.reject(error.message || error);
   }
  }

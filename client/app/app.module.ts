@@ -6,8 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 
-import { AngularFireModule, AuthMethods, 
-  AuthProviders } from "angularfire2";
+import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCOm8FwfjmIjHqLwpKvMfDCvrv1e58Tkt4",
@@ -15,6 +14,10 @@ const firebaseConfig = {
   databaseURL: "https://fcc-chadsheets-com.firebaseio.com",
   storageBucket: "fcc-chadsheets-com.appspot.com",
   messagingSenderId: "487755790032"
+};
+const firebaseAuthConfig = {
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup
 };
 
 import { AppComponent } from './app.component';
@@ -29,10 +32,7 @@ import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboa
     RouterModule.forRoot(routes, {
       useHash: true
     }),
-    AngularFireModule.initializeApp(firebaseConfig,{
-      provider: AuthProviders.Google,
-      method: AuthMethods.Popup
-    })
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
   ],
   declarations: [
     AppComponent,
