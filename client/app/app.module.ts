@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
+import { router } from './app.routes';
 
 import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
 
@@ -29,10 +28,8 @@ import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboa
 @NgModule({
   imports: [
     BrowserModule, FormsModule, HttpModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    }),
-    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
+    router
   ],
   declarations: [
     AppComponent,

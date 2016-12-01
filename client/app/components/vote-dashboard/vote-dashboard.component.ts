@@ -37,5 +37,12 @@ logout() {
 isLoggedIn() {
   return Boolean(this.user);
 }
+ 
+userOut() {
+  if(this.user){
+    return JSON.stringify(this.user);
+  }
+  return '';
+}
 
  }
