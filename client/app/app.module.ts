@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { router } from './app.routes';
+import { Logger, ConsoleLogService } from "./services/logger.service";
+import * as Raven from 'raven-js';
 
 import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
 
@@ -18,6 +20,14 @@ const firebaseAuthConfig = {
       provider: AuthProviders.Google,
       method: AuthMethods.Popup
 };
+Raven
+  .config('https://263268fcfe8a4e3dad2253c1f65cf4fa@sentry.io/119031')
+  .install();
+class RavenErrorHandler implements ErrorHandler {
+  handleError(err:any) : void {
+    Raven.captureException(err.originalError);
+  }
+}
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -38,7 +48,14 @@ import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboa
     ImageSearchComponent,
     VoteDashboardComponent
   ],
-  providers: [ ImageSearchService ],
+  providers: [ 
+    ImageSearchService,
+    // In the browser platform, we're going to use the ConsoleLogService as the
+    // implementation of the Logger service. This way, when application components
+    // inject "Logger" DI token, they'll actually receive "ConsoleLogService".
+    { provide: Logger, useClass: ConsoleLogService },
+    { provide: ErrorHandler, useClass: RavenErrorHandler }
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
