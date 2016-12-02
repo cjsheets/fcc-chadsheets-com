@@ -35,6 +35,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ImageSearchService } from './components/image-search/image-search.service';
 import { ImageSearchComponent } from './components/image-search/image-search.component';
 import { PollComponent } from './components/poll/poll.component';
+import { PollService } from './components/poll/poll.service';
 import { PollListComponent } from './components/poll-list/poll-list.component';
 import { NewPollComponent } from './components/new-poll/new-poll.component';
 import { LoginComponent } from './components/login/login.component';
@@ -56,6 +57,7 @@ import { LoginComponent } from './components/login/login.component';
   ],
   providers: [ 
     ImageSearchService,
+    PollService,
     // In the browser platform, we're going to use the ConsoleLogService as the
     // implementation of the Logger service. This way, when application components
     // inject "Logger" DI token, they'll actually receive "ConsoleLogService".

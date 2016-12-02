@@ -43,7 +43,7 @@ let pollsPromise = Promise.resolve(POLLS);
 
 @Injectable()
 export class PollService {
-  getPolls(): Promise<[Poll]> {
+  getPolls(): Promise<Poll[]> {
     return pollsPromise;
   }
 
