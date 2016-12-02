@@ -1,0 +1,22 @@
+
+      <button md-raised-button (click)="login()">
+        Use My Google Account
+      </button>
+      <button md-raised-button (click)="logout()">
+        Logout
+      </button>
+
+
+<div *ngIf="user">
+  Not Logged In: {{ userOut() }}
+</div>
+<div *ngIf="! user">
+  Logged In: {{ userOut() }}
+</div>
+		<ul>
+			<li><a (click)="test( 'log' )">Log something.</a></li>
+			<li><a (click)="test( 'error' )">Error something.</a></li>
+			<li><a (click)="test( 'info' )">Info something.</a></li>
+			<li><a (click)="test( 'warn' )">Warn something.</a></li>
+			<li><a (click)="testGroup()">Group something.</a></li>
+		</ul>

@@ -34,7 +34,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ImageSearchService } from './components/image-search/image-search.service';
 import { ImageSearchComponent } from './components/image-search/image-search.component';
-import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboard.component';
+import { PollComponent } from './components/poll/poll.component';
+import { PollListComponent } from './components/poll-list/poll-list.component';
+import { NewPollComponent } from './components/new-poll/new-poll.component';
+import { LoginComponent } from './components/login/login.component';
 @NgModule({
   imports: [
     BrowserModule, FormsModule, HttpModule,
@@ -46,7 +49,10 @@ import { VoteDashboardComponent } from './components/vote-dashboard/vote-dashboa
     HeaderComponent,
     SidebarComponent,
     ImageSearchComponent,
-    VoteDashboardComponent
+    PollComponent,
+    PollListComponent,
+    NewPollComponent,
+    LoginComponent
   ],
   providers: [ 
     ImageSearchService,

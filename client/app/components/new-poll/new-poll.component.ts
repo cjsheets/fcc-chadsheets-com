@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { VoteDashboardService } from './vote-dashboard.service';
+import { NewPollService } from './new-poll.service';
 import { AngularFire, AuthProviders } from 'angularfire2';
 
 import { Logger } from '../../services/logger.service';
 
 @Component({
-  selector: 'app-vote-dashboard',
-  templateUrl: './vote-dashboard.view.html',
-  styleUrls: ['./vote-dashboard.view.css'],
-  providers: [ VoteDashboardService ]
+  selector: 'app-new-poll',
+  templateUrl: './new-poll.view.html',
+  styleUrls: ['./new-poll.view.css'],
+  providers: [ NewPollService ]
 })
 
-export class VoteDashboardComponent {
+export class NewPollComponent {
 
 	private logger: Logger;
   user = {};
