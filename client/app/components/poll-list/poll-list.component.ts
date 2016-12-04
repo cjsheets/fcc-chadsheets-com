@@ -7,7 +7,7 @@ import { Poll, PollService } from '../poll/poll.service';
 import { Logger } from '../../services/logger.service';
 
 @Component({
-  selector: 'app-poll-list',
+  moduleId: 'vote-app',
   templateUrl: './poll-list.view.html',
   styleUrls: ['./poll-list.view.css'],
   providers: [ PollListService ]

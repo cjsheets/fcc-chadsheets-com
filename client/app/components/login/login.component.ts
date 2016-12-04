@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { AngularFire, AuthProviders } from 'angularfire2';
 
 import { Logger } from '../../services/logger.service';
 
 @Component({
-  selector: 'app-login',
+  moduleId: 'vote-app',
   templateUrl: './login.view.html',
   styleUrls: ['./login.view.css'],
   providers: [ LoginService ]
@@ -16,7 +17,11 @@ export class LoginComponent {
 	private logger: Logger;
   user = {};
 
-  constructor( public af: AngularFire, logger: Logger ) {
+  constructor(
+    public af: AngularFire,
+    private router: Router,
+    logger: Logger
+    ) {
     this.af.auth.subscribe(user => {
       if(user) { // user logged in
         this.user = user;
@@ -49,25 +54,5 @@ export class LoginComponent {
     }
     return '';
   }
-
-	// I test the basic log levels of the logger.
-	public test( level: string ) : void {
-
-		this.logger[ level ]( "Dang, logService.%s() is kind of cool!", level );
-
-	}
-
-
-	// I test the grouping of log output.
-	public testGroup() : void {
-
-		this.logger.group( "Group Test" );
-		this.logger.log( "Inside a group." );
-		this.logger.error( "Inside a group." );
-		this.logger.info( "Inside a group." );
-		this.logger.warn( "Inside a group." );
-		this.logger.groupEnd();
-
-	}
 
 }
