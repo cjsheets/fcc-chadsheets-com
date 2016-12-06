@@ -34,10 +34,19 @@ export class LoginComponent {
   }
 
 
-  login() {
-    this.af.auth.login({
-      provider: AuthProviders.Facebook
-    });
+  login(authProvider: string): void {
+    switch(authProvider){
+      case 'google': this.af.auth.login({
+        provider: AuthProviders.Google }); break;
+      case 'github': this.af.auth.login({
+        provider: AuthProviders.Github }); break;
+      case 'facebook': this.af.auth.login({
+        provider: AuthProviders.Facebook }); break;
+      case 'twitter': this.af.auth.login({
+        provider: AuthProviders.Twitter }); break;
+      default: this.af.auth.login({
+        provider: AuthProviders.Password }); break;
+    }
   }
   
   logout() {

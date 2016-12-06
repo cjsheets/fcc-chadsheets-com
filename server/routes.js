@@ -25,8 +25,9 @@ export default function(app) {
     app.route('/*')
       .get((req, res) => {
         //res.sendFile(middleware.fileSystem.readFileSync(path.resolve(`${app.get('appPath')}/index.html`)));
-        res.write(path.resolve(`${app.get('appPath')}/index.html`));
-        res.end();
+        res.sendFile(path.resolve(`${app.get('appPath')}/index.html`));
+        // res.write(path.resolve(`${app.get('appPath')}/index.html`));
+        // res.end();
       });
     } else {
       app.route('/*')

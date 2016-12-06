@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app',
   moduleId: 'vote-app',
-  templateUrl: './app.view.html',
-  styleUrls: ['./app.view.css']
+  templateUrl: '../views/app.view.html',
+  styleUrls: ['../views/app.view.css']
 })
 
 export class AppComponent {

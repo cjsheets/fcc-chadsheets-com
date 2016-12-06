@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { router } from './app.routes';
+import { router } from './routes/app.routes';
 import { Logger, ConsoleLogService } from "./services/logger.service";
 import * as Raven from 'raven-js';
 
@@ -20,6 +20,7 @@ const firebaseAuthConfig = {
       provider: AuthProviders.Google,
       method: AuthMethods.Popup
 };
+
 Raven
   .config('https://263268fcfe8a4e3dad2253c1f65cf4fa@sentry.io/119031')
   .install();
@@ -29,7 +30,9 @@ class RavenErrorHandler implements ErrorHandler {
   }
 }
 
-import { AppComponent } from './app.component';
+import { AuthModule } from './auth.module';
+
+import { AppComponent } from './components/app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ImageSearchService } from './components/image-search/image-search.service';
@@ -43,6 +46,7 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule, FormsModule, HttpModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
+    AuthModule,
     router
   ],
   declarations: [
