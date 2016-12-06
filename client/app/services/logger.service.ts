@@ -69,4 +69,8 @@ export class ConsoleLogService implements ILogger {
 		( console && console.warn ) && console.warn( ...args );
 	}
 
+
+	// In the browser platform, we're going to use the ConsoleLogService as the
+	// implementation of the Logger service. This way, when application components
+	// inject "Logger" DI token, they'll actually receive "ConsoleLogService".
 }
