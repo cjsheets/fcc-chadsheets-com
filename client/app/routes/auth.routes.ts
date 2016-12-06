@@ -1,17 +1,18 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { PollComponent } from '../components/poll/poll.component';
-import { PollListComponent } from '../components/poll-list/poll-list.component';
-import { LoginComponent } from '../components/login/login.component';
-import { NewPollComponent } from '../components/new-poll/new-poll.component';
-// import { AuthComponent } from './components/auth/auth.component';
+import { LoginComponent, SignupComponent, ResetpassComponent } from '../components/auth.component';
 
-const routes: Routes = [
-  { path: '', component: PollListComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'poll', component: PollComponent },
-  { path: 'poll/new', component: NewPollComponent },
-  { path: '**', redirectTo: '' }
+// Save space in the auth module, export components here
+export const appRoutedComponents = [
+  LoginComponent,
+  SignupComponent,
+  ResetpassComponent
 ];
 
-export const router = RouterModule.forRoot(routes);
+const routes: Routes = [
+  { path: 'log', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'password-reset', component: ResetpassComponent }
+];
+
+export const appRoutes = RouterModule.forRoot(routes);

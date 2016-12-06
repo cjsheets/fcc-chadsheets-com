@@ -11,7 +11,7 @@ import { RavenErrorHandler } from './shared/sentry-io';
 import { AppComponent } from './components/app.component';
 import { appRoutes, appRoutedComponents } from './routes/app.routes';
 
-//import { AuthModule } from './auth.module';
+import { AuthModule } from './auth.module';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
@@ -21,7 +21,7 @@ import { PollService } from './components/poll/poll.service';
   imports: [
     BrowserModule, FormsModule, HttpModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
-//    AuthModule,
+    AuthModule,
     appRoutes
   ],
   declarations: [

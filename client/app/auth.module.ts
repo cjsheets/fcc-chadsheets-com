@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { router } from './routes/auth.routes';
-import { LoginComponent, SignupComponent, ResetpassComponent } from './components/auth.component';
+import { appRoutes, appRoutedComponents } from './routes/auth.routes';
 
 @NgModule({
   imports: [
     FormsModule,
-    router
+    appRoutes
   ],
   declarations: [
-    LoginComponent,
-    SignupComponent,
-    ResetpassComponent
+    appRoutedComponents
   ]
 })
 export class AuthModule { }
