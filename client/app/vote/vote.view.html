@@ -1,5 +1,4 @@
 
-<div class="container">
   <div class="row">
     <div class="col-sm-6">
       <a routerLink="/">Angular2 Voting App</a>
@@ -10,8 +9,8 @@
         <a (click)="logout()" title="Logout">Logout</a>
       </span>
       <span *ngIf="!(af.auth | async)">
-        <a routerLink="/signup" title="Sign Up">Sign Up</a> &nbsp; &nbsp;
-        <a routerLink="/login" title="Login">Login</a>
+        <a (click)="modalService.open(MODAL_DEMO_ID)" title="Sign Up">Sign Up</a> &nbsp; &nbsp;
+        <a (click)="modalService.open(MODAL_DEMO_ID)" title="Login">Login</a>
       </span>
     </div>
   </div>
@@ -21,21 +20,15 @@
       <!--<app-poll-list></app-poll-list>-->
     </div>
   </div>
-</div>
 
-
-<button (click)="modalService.open(MODAL_DEMO_ID)">
-    Open Modal
-</button>
-
-<tb-modal modal-title="Catchy Title Here" blocking="true"
+<tb-modal modal-title="Catchy Title Here" blocking="false"
     modal-id="{{ MODAL_DEMO_ID }}">
+        <a (click)="modalService.close(MODAL_DEMO_ID)">No</a>
 
     <div class="center">Are you sure about this?</div>
 
     <div class="buttons">
         <button class="flat" (click)="doTheThing()">Yes</button>
-        <button (click)="modalService.close(MODAL_DEMO_ID)">No</button>
     </div>
 </tb-modal>
 

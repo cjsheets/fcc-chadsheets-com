@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { appRoutes, appRoutedComponents } from './auth.routes';
+import { AuthRoutingModule, routedComponents } from './auth-routing.module';
 
 @NgModule({
   imports: [
     FormsModule,
-    appRoutes
+    AuthRoutingModule
   ],
   declarations: [
-    appRoutedComponents
+    routedComponents
   ]
 })
 export class AuthModule { }
