@@ -1,10 +1,13 @@
+import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './shared/login';
+import { HeaderComponent } from './app-header.component';
+import { SidebarComponent } from './app-sidebar.component';
 
 // Save space in the root module, export components here
-export const appRoutedComponents = [
-  LoginComponent,
+export const routedComponents = [
+  HeaderComponent,
+  SidebarComponent
 ];
 
 const routes: Routes = [
@@ -13,4 +16,12 @@ const routes: Routes = [
   { path: '**', redirectTo: 'vote' }
 ];
 
-export const appRoutes = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule { }

@@ -24,3 +24,19 @@
 </div>
 
 
+<button (click)="modalService.open(MODAL_DEMO_ID)">
+    Open Modal
+</button>
+
+<tb-modal modal-title="Catchy Title Here" blocking="true"
+    modal-id="{{ MODAL_DEMO_ID }}">
+
+    <div class="center">Are you sure about this?</div>
+
+    <div class="buttons">
+        <button class="flat" (click)="doTheThing()">Yes</button>
+        <button (click)="modalService.close(MODAL_DEMO_ID)">No</button>
+    </div>
+</tb-modal>
+
+
