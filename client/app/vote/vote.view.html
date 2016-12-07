@@ -21,15 +21,20 @@
     </div>
   </div>
 
-<tb-modal modal-title="Catchy Title Here" blocking="false"
-    modal-id="{{ MODAL_DEMO_ID }}">
-        <a (click)="modalService.close(MODAL_DEMO_ID)">No</a>
-
-    <div class="center">Are you sure about this?</div>
-
-    <div class="buttons">
-        <button class="flat" (click)="doTheThing()">Yes</button>
+<modal-window modal-title="Voting App" [blocking]="false"
+  modal-id="{{ MODAL_DEMO_ID }}">
+  <div class="modal-body">
+     <auth></auth>
     </div>
-</tb-modal>
+    <div class="modal-footer">
+        <a (click)="close()">Login</a>
+    </div>
+</modal-window>
 
+<!--
+   <a (click)="modalService.close(MODAL_DEMO_ID)">No</a>
+      <div class="center">Are you sure about this?</div>
 
+      <div class="buttons">
+          <button class="flat" (click)="doTheThing()">Yes</button>
+      </div>-->

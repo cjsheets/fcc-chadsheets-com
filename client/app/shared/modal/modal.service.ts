@@ -14,7 +14,7 @@ export class ModalService {
     }
 
     registerModal(newModal: ModalComponent): void {
-      this.logger['log']('register');
+        this.logger['log']('ModalService - registerModal(' + newModal.modalId + ')');
         var modal = this.findModal(newModal.modalId);
 
         // Delete existing to replace the modal
@@ -26,7 +26,7 @@ export class ModalService {
     }
 
     open(modalId: string): void {
-      this.logger['log']('open');
+        this.logger['log']('ModalService - open(' + modalId + ')');
         var modal = this.findModal(modalId);
 
         if (modal) {
@@ -35,10 +35,12 @@ export class ModalService {
     }
 
     close(modalId: string, checkBlocking = false): void {
+        this.logger['log']('ModalService - close(' + modalId + ', ' + checkBlocking + ')');
         var modal = this.findModal(modalId);
 
         if (modal) {
             if (checkBlocking && modal.blocking) {
+                this.logger['log']('ModalService - modal.blocking = ' +modal.blocking );
                 return;
             }
 
@@ -47,6 +49,7 @@ export class ModalService {
     }
 
     private findModal(modalId: string): ModalComponent {
+        this.logger['log']('ModalService - findModal(' + modalId + ')');
         for (var modal of this.modals) {
             if (modal.modalId === modalId) {
                 return modal;

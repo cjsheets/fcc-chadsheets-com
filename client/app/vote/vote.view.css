@@ -1,0 +1,22 @@
+
+
+.modal-body {
+    background-color: #FFFFFF;
+}
+
+.modal-footer {
+        padding: 0px;
+}
+
+.modal-footer a {
+    background-color: #0c73b8;
+        display: block;
+        height: 100%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 0px 0px 6px 6px;
+}
+
+.modal-footer a:hover {
+    background-color: #cccccc;
+}

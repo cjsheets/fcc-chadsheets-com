@@ -8,6 +8,7 @@ import { ModalComponent, ModalService } from '../shared/modal';
 @Component({
   selector: 'vote',
   templateUrl: './vote.view.html',
+  styleUrls: ['./vote.view.css'],
 })
 
 export class VoteComponent { 

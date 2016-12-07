@@ -1,18 +1,13 @@
 <div *ngIf="isOpen">
-    <div class="modal-overlay fade in" (click)="close(true)"></div>
-
-    <div class="modal-container">
-        <div class="modal-title" *ngIf="modalTitle">
-            <h2>
-                {{ modalTitle }}
-                <span class="modal-right" (click)="close()">
-                    <i class="icon icon-cancel"></i>
-                </span>
-            </h2>
+  <div class="modal-overlay" (click)="close(true)"></div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header" *ngIf="modalTitle">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            (click)="close()"><i class="zmdi zmdi-close"></i></button>
+        <h4 class="modal-title">{{ modalTitle }}</h4>
         </div>
-
-        <div class="modal-body">
-            <ng-content></ng-content>
-        </div>
+      <ng-content></ng-content>
     </div>
+  </div>
 </div>

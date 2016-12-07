@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { afConfig, afAuthConfig } from './shared/firebase';
+
 import { AuthModule } from '../auth/auth.module';
 
 import { VoteRoutingModule, routedComponents } from './vote-routing.module';
