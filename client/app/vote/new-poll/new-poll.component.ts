@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { PollService } from './poll.service';
+import { NewPollService } from './new-poll.service';
 import { AngularFire, AuthProviders } from 'angularfire2';
 
-import { Logger } from '../../services/logger.service';
+import { Logger } from '../../shared/logger.service';
 
 @Component({
-  selector: 'app-poll',
-  templateUrl: './poll.view.html',
-  styleUrls: ['./poll.view.css'],
-  providers: [ PollService ]
+  selector: 'app-new-poll',
+  templateUrl: './new-poll.view.html',
+  styleUrls: ['./new-poll.view.css'],
+  providers: [ NewPollService ]
 })
 
-export class PollComponent {
+export class NewPollComponent {
 
 	private logger: Logger;
   user = {};

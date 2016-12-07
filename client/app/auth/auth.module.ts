@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { appRoutes, appRoutedComponents } from './routes/auth.routes';
+import { appRoutes, appRoutedComponents } from './auth.routes';
 
 @NgModule({
   imports: [

@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AngularFire, FirebaseApp } from 'angularfire2';
-import { Modal } from './modal/modal.component';
-import { ModalService } from './modal/modal.service';
+import { ModalComponent, ModalService } from './shared/modal';
 
 
 @Component({
   selector: 'app',
   moduleId: 'vote-app',
-  templateUrl: '../views/app.view.html',
-  styleUrls: ['../views/app.view.css']
+  templateUrl: './app.view.html',
+  styleUrls: ['./app.view.css']
 })
 
 export class AppComponent {

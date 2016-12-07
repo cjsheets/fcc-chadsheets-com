@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { PollListService } from './poll-list.service';
 import { Poll, PollService } from '../poll/poll.service';
 
-import { Logger } from '../../services/logger.service';
+import { Logger } from '../../shared/logger.service';
 
 @Component({
   moduleId: 'vote-app',

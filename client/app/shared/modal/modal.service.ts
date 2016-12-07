@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { Modal } from './modal.component';
-import { Logger } from '../../services/logger.service';
+import { ModalComponent } from './modal.component';
+import { Logger } from '../logger.service';
 
 @Injectable()
 export class ModalService {
-    private modals: Array<Modal>;
+    private modals: Array<ModalComponent>;
 	private logger: Logger;
 
     constructor(logger: Logger) {
@@ -13,7 +13,7 @@ export class ModalService {
         this.logger = logger;
     }
 
-    registerModal(newModal: Modal): void {
+    registerModal(newModal: ModalComponent): void {
       this.logger['log']('register');
         var modal = this.findModal(newModal.modalId);
 
@@ -46,7 +46,7 @@ export class ModalService {
         }
     }
 
-    private findModal(modalId: string): Modal {
+    private findModal(modalId: string): ModalComponent {
         for (var modal of this.modals) {
             if (modal.modalId === modalId) {
                 return modal;

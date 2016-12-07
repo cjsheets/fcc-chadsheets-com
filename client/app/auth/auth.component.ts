@@ -2,10 +2,10 @@ import { Component, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AngularFire, FirebaseApp } from 'angularfire2';
-import { Logger } from '../services/logger.service';
+import { Logger } from '../shared/logger.service';
 
 @Component({
-  templateUrl: '../views/auth-signup.view.html'
+  templateUrl: './auth-signup.view.html'
 })
 
 export class SignupComponent {
@@ -40,7 +40,7 @@ export class SignupComponent {
 }
 
 @Component({
-  templateUrl: '../views/auth-login.view.html'
+  templateUrl: './auth-login.view.html'
 })
 
 export class LoginComponent {
@@ -75,7 +75,7 @@ export class LoginComponent {
 }
 
 @Component({
-  templateUrl: '../views/auth-resetpassword.view.html'
+  templateUrl: './auth-resetpassword.view.html'
 })
 
 export class ResetpassComponent {

@@ -1,6 +1,6 @@
 import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
 
-export const firebaseConfig = {
+export const afConfig = {
   apiKey: "AIzaSyCOm8FwfjmIjHqLwpKvMfDCvrv1e58Tkt4",
   authDomain: "fcc-chadsheets-com.firebaseapp.com",
   databaseURL: "https://fcc-chadsheets-com.firebaseio.com",
@@ -8,7 +8,7 @@ export const firebaseConfig = {
   messagingSenderId: "487755790032"
 };
 
-export const firebaseAuthConfig = {
+export const afAuthConfig = {
       provider: AuthProviders.Google,
       method: AuthMethods.Popup
 };

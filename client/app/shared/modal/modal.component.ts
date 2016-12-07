@@ -13,7 +13,7 @@ import { ModalService } from './modal.service';
   styleUrls: ['./modal.view.css'],
     host: { '(document:keyup)': 'keyup($event)' }
 })
-export class Modal implements OnInit {
+export class ModalComponent implements OnInit {
     @Input('modal-id') modalId: string;
     @Input('modal-title') modalTitle: string;
     @Input() blocking = false;

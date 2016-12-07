@@ -3,10 +3,11 @@ import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { AngularFire, AuthProviders } from 'angularfire2';
 
-import { Logger } from '../../services/logger.service';
+import { Logger } from '../logger.service';
 
 @Component({
   moduleId: 'vote-app',
+  selector: 'login-comp',
   templateUrl: './login.view.html',
   styleUrls: ['./login.view.css'],
   providers: [ LoginService ]

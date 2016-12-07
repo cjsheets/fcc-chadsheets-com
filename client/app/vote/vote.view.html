@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <a routerLink="/">Angular2 Voting App</a>
+    </div>
+    <div class="col-sm-6">
+      <span *ngIf="af.auth | async">
+        <a routerLink="/profile" >Profile</a> &nbsp; &nbsp;
+        <a (click)="logout()" title="Logout">Logout</a>
+      </span>
+      <span *ngIf="!(af.auth | async)">
+        <a routerLink="/signup" title="Sign Up">Sign Up</a> &nbsp; &nbsp;
+        <a routerLink="/login" title="Login">Login</a>
+      </span>
+    </div>
+  </div>
+  <div class="row" style="padding-top: 20px;">
+    <div class="col-sm-12">
+      <router-outlet></router-outlet>
+      <!--<app-poll-list></app-poll-list>-->
+    </div>
+  </div>
+</div>
+
+
