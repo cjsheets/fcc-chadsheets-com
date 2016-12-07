@@ -8,7 +8,7 @@ import { Logger, ConsoleLogService } from './shared/logger.service';
 import { RavenErrorHandler } from './shared/sentry-io';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule, routedComponents } from './app.routes';
+import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 @NgModule({
   imports: [
