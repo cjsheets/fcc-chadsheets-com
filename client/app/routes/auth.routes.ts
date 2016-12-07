@@ -1,6 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent, SignupComponent, ResetpassComponent } from '../components/auth.component';
+import {
+  LoginComponent,
+  SignupComponent,
+  ResetpassComponent
+} from '../components/auth.component';
 
 // Save space in the auth module, export components here
 export const appRoutedComponents = [

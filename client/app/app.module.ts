@@ -10,6 +10,8 @@ import { RavenErrorHandler } from './shared/sentry-io';
 
 import { AppComponent } from './components/app.component';
 import { appRoutes, appRoutedComponents } from './routes/app.routes';
+import { Modal } from './components/modal/modal.component';
+import { ModalService } from './components/modal/modal.service';
 
 import { AuthModule } from './auth.module';
 
@@ -28,10 +30,12 @@ import { PollService } from './components/poll/poll.service';
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    appRoutedComponents
+    appRoutedComponents,
+    Modal,
   ],
   providers: [ 
     PollService,
+    ModalService,
     { provide: Logger, useClass: ConsoleLogService },
     { provide: ErrorHandler, useClass: RavenErrorHandler }
   ],

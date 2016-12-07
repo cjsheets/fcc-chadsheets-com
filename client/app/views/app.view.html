@@ -34,12 +34,18 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8">
-      <a href="/">FCC Voting App</a>
+    <div class="col-sm-6">
+      <a routerLink="/">Angular2 Voting App</a>
     </div>
-    <div class="col-sm-4">
-      <a routerLink="/login">Login</a>
-      <a routerLink="/log">Log</a>
+    <div class="col-sm-6">
+      <span *ngIf="af.auth | async">
+        <a routerLink="/profile" >Profile</a> &nbsp; &nbsp;
+        <a (click)="logout()" title="Logout">Logout</a>
+      </span>
+      <span *ngIf="!(af.auth | async)">
+        <a routerLink="/signup" title="Sign Up">Sign Up</a> &nbsp; &nbsp;
+        <a routerLink="/login" title="Login">Login</a>
+      </span>
     </div>
   </div>
   <div class="row" style="padding-top: 20px;">
@@ -49,6 +55,23 @@
     </div>
   </div>
 </div>
+
+
+<button (click)="modalService.open(MODAL_DEMO_ID)">
+    Open Modal
+</button>
+
+<tb-modal modal-title="Catchy Title Here" blocking="true"
+    modal-id="{{ MODAL_DEMO_ID }}">
+
+    <div class="center">Are you sure about this?</div>
+
+    <div class="buttons">
+        <button class="flat" (click)="doTheThing()">Yes</button>
+        <button (click)="modalService.close(MODAL_DEMO_ID)">No</button>
+    </div>
+</tb-modal>
+
 
               <!-- End Application -->
     </section>
