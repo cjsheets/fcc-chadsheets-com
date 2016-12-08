@@ -26,3 +26,4 @@ import { ModalComponent, ModalService } from '../shared/modal';
   ]
 })
 export class VoteModule { }
+
