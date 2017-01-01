@@ -7,7 +7,7 @@ import { PollListComponent } from './poll-list/poll-list.component';
 import { NewPollComponent } from './new-poll/new-poll.component';
 
 // Save space in the root module, export components here
-export const routedComponents = [
+export const routedComponents: any[] = [
   VoteComponent,
   PollComponent,
   PollListComponent,

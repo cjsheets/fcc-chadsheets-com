@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { AuthRoutingModule, routedComponents } from './auth-routing.module';
 
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   imports: [
-    FormsModule,
+    SharedModule,
     AuthRoutingModule
+  ],
+  exports : [
+    routedComponents
   ],
   declarations: [
     routedComponents

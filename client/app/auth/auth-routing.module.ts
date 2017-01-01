@@ -15,6 +15,7 @@ export const routedComponents = [
 ];
 
 const routes: Routes = [
+  { path: '', component: AuthComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'password-reset', component: ResetpassComponent }
