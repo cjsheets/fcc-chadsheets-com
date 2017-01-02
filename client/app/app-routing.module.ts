@@ -13,7 +13,7 @@ export const routedComponents = [
 const routes: Routes = [
 //  { path: 'login', component: LoginComponent },
   { path: '', loadChildren: 'vote/vote.module#VoteModule' },
-  { path: '**', redirectTo: 'vote' }
+  { path: '**', redirectTo: 'vote', pathMatch: 'full' }
 ];
 
 @NgModule({
