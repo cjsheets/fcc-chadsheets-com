@@ -1,34 +1,38 @@
-#* -----------------------------------|
-#*| General nodeJS
-#*/
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-build/Release
-jspm_packages
-logs
-node_modules
-public
+# compiled output
+/dist
+/tmp
 
-*.log
-npm-debug.log*
-*.pid
-*.pid.lock
-pids
-*.seed
-*.tgz
-.eslintcache
-.idea
-.node_repl_history
-.npm
-.sass-cache
-.tmp
-.vscode
+# dependencies
+/node_modules
+/bower_components
 
-#* -----------------------------------|
-#*| Angular+Express Kickstart
-#*/
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 
-.env
-/dist/*
-/server/config/local.env.js
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
 
+# e2e
+/e2e/*.js
+/e2e/*.map
 
+#System Files
+.DS_Store
+Thumbs.db
+
+server/config/environment/development.env.js
+yelp.api

@@ -1,23 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppComponent } from "./app.component";
 
-import { VoteModule } from './vote/vote.module';
+import { SharedModule } from './shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule, routedComponents } from './app-routing.module';
+import { AppRoutingModule, routedComponents } from './routing.module';
 
 @NgModule({
   imports: [
-    BrowserModule, FormsModule, HttpModule,
-    VoteModule,
+    BrowserModule,
+    NgbModule.forRoot(),
+    SharedModule,
     AppRoutingModule
   ],
   declarations: [
-    AppComponent,
     routedComponents
   ],
-  bootstrap: [ AppComponent ]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

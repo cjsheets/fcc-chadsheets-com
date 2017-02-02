@@ -1,114 +1,105 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<main>
-<div class="container" id="main">
-  <div class="row scroll-container">
-    <div class="col-md-9">
-      <div class="container pages" id="content">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="well page active content" id="about">
-              <!-- Reset Indent -->
-
-<a name="top-anchor"></a>
-<section id="image-search">
-  <h2>Image Search API</h2>
-  <p>This application abstracts a Google Custom Search Engine (CSE) into a simple
-    API for image searches. 
-  </p>
-  <p>
-    <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
-      Additional Info
-    <div class="ripple-container"></div></a>
-  </p>
-  <br><br>
-  <hr>
-  <section id="try-it">
-    <h3>See It In Action</h3>
-    
-      <p>Enter a search term to see what the API returns.
-      </p>
-
-      <hr>
-              <!-- Begin Application -->
-
-
-      <router-outlet></router-outlet>
-
-              <!-- End Application -->
-    </section>
-
-  </section>
-    
-              <!-- /Reset Indent -->
-            </div>
+<div id="wrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <a class="title-link" [routerLink]="['/nl']">
+          <h3 class="page-title"><i class="zmdi zmdi-cocktail"></i> &nbsp; Angular Nightlife</h3>
+        </a>
+      </div>
+      <div class="col-sm text-right" *ngIf="activeRoute == '/nl'">
+        <button class="btn btn-secondary btn-about"  (click)="open(content)">
+          &nbsp; About &nbsp;
+        </button>
+      </div>
+      <div class="col-sm text-right" *ngIf="activeRoute == '/nl/search'">
+        <form class="form-inline searchbox" #form="ngForm" (submit)="search(form.value)">
+          <label class="sr-only col-form-label" 
+            for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2 mt-3 w-100">
+            <input type="text" class="form-control" name="location"  ngModel
+              id="inlineFormInputGroup" [placeholder]="_yelp.searchTerm">
+            <div class="input-group-addon" (click)="search(form.value)">Search</div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-    <div class="col-md-3 scrollspy">
-        <ul id="navspy" class="nav hidden-xs hidden-sm navspy" data-spy="affix">
-          <li><a href="#image-search">Search API</a>
-            <ul class="nav navspy">
-              <li><a href="#try-it">In Action</a></li>
-              <li><a href="#search-details">Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#latest">Recent API</a>
-            <ul class="nav navspy">
-              <li><a href="#try-latest">In Action</a></li>
-              <li><a href="#latest-details">Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#more-information">Additional Info</a>
-            <ul class="nav navspy">
-              <li><a href="#limitations">Limitations</a></li>
-              <li><a href="#user-story">User Story</a></li>
-              <li><a href="#to-do">ToDo</a></li>
-            </ul>
-          </li>
-        <li style="padding-top: 10px;"><a href="#top-anchor">Back to Top</a></li>
-        </ul>
-    </div>
-<!--    <nav class="col-m-2 menu">
-      <ul>
-        <li class="active withripple" data-target="#about">Material Design for Bootstrap</li>
-        <li class="withripple" data-target="#getting-started">Getting Started</li>
-        <li><a href="bootstrap-elements.html" target="_blank">Bootstrap elements <i class="material-icons">open_in_new</i></a>
-        </li>
-        <li class="withripple" data-target="#checkbox">Checkbox</li>
-        <li class="withripple" data-target="#radio-button">Radio Button</li>
-        <li class="withripple" data-target="#toggle-button">Toggle Button</li>
-        <li class="withripple" data-target="#input">Input</li>
-        <li class="withripple" data-target="#fileinput">File Input</li>
-        <li class="withripple" data-target="#navbar">Navbar</li>
-        <li class="withripple" data-target="#progress-bar">Progress Bar</li>
-        <li class="withripple" data-target="#slider">Slider</li>
-        <li class="withripple" data-target="#dropdown">Dropdown (Work in progress)</li>
-        <li class="withripple" data-target="#dropdown-menu">Dropdown Menu</li>
-        <li class="withripple" data-target="#dialog">Dialog</li>
-      </ul>
-    </nav>-->
-  </div>
-  <div class="row">
-    <footer class="col-xs-12 application">
-      <div class="container" id="footer">
-        <h2>About</h2>
-        <div class="row">
-<br><br>
-          <div class="col-sm-6">
-            <p>More details to come
-            </p>
-            <img class="img-responsive  " src="http://placehold.it/500x250/5fb3ce/000000">
-          </div>
-          <div class="col-sm-6">
-            <p>Hopefully sooner than later
-            </p>
-          </div>
-<br><br>
-        </div><!--end of .row-->
-      </div><!--end of .container-->
-    </footer> 
-  </div>
+  </div> <!-- / container-fluid -->
+
+  <ngb-alert-component></ngb-alert-component>
+
+  <router-outlet></router-outlet>
+
 </div>
-</main>
+  <!--Debugging
+<div class="container-fluid" style="background: #FFFFFF;">
+  <div class="row">
+    <div class="col-sm">
+      <b style="color: darkgreen">Debugging: </b>
+      &nbsp; &nbsp; - &nbsp; &nbsp;
+      <b>activeRoute: </b> {{activeRoute}}
+
+      <b>searchTerm: </b> {{_yelp.searchTerm}}
+
+      &nbsp; &nbsp; - &nbsp; &nbsp;
+
+      <a [routerLink]="['/nl/']">/ root</a>,
+      <a [routerLink]="['/nl/search']">/search</a>
+
+      &nbsp; &nbsp; - &nbsp; &nbsp;
+      <button (click)="_auth.redirectToProvider('google')" class="btn btn-secondary btn-sm">
+        Google
+      </button>
+      <button (click)="_auth.redirectToProvider('twitter')" class="btn btn-secondary btn-sm">
+        Twitter
+      </button>
+      <button (click)="_auth.redirectToProvider('facebook')" class="btn btn-secondary btn-sm">
+        Facebook
+      </button>
+      <button (click)="_auth.logout()" class="btn btn-secondary btn-sm">
+        Logout
+      </button>
+      <button (click)="checkLoggedIn()" class="btn btn-secondary btn-sm">
+        Test: {{_auth.authStatus}}
+      </button>
+      <button (click)="getVenues()" class="btn btn-secondary btn-sm">
+        API
+      </button>
+    </div>
+  </div>
+</div> -->
+
+<footer class="text-center">
+  <!-- https://www.flickr.com/photos/lennykphotography/17390996656/ -->
+  <p class="credit">Photo:
+    <a class="credit" href="http://www.lennykphotography.com/">Lenny K.</a>
+  </p>
+  <p>FreeCodeCamp &nbsp; | &nbsp; <i class="zmdi zmdi-github-alt"></i> &nbsp; <a href="https://github.com/cjsheets">Chad Sheets</a></p>
+</footer>
+
+<template #content let-c="close" let-d="dismiss" ngbModalContainer>
+  <div class="modal-header">
+    <h5 class="modal-title">About :: Angular Nightlife</h5>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <p>Angular Nightlife is an Angular 2 application built for educational and demonstration purposes as part of the
+      FreeCodeCamp Fullstack curriculum. The full source code is 
+      <a href="https://github.com/cjsheets/angular-nightlife-app">available here.</a>Objectives include:</p>
+      <ul>
+        <li>User Story: As an unauthenticated user, I can view all bars in my area.</li>
+        <li>User Story: As an authenticated user, I can add myself to a bar to indicate I am going there tonight.</li>
+        <li>User Story: As an authenticated user, I can remove myself from a bar if I no longer want to go there.</li>
+        <li>User Story: As an unauthenticated user, when I login I should not have to search again.</li>
+      </ul>
+    <p>By leveraging a Node.js backend (deployed on Heroku) this application interfaces with Yelps API to provide users
+      with a rudimentary means of coordinating their nightlife activities.</p>
+      
+    <p>Data from sessions is stored in a MongoDB collection at mLab.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-md btn-outline-secondary" (click)="c('Close click')">Close</button>
+  </div>
+</template>

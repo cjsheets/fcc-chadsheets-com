@@ -1,8 +1,0 @@
-<h2>Current Polls</h2>
-<ul class="items">
-  <!-- Flow `polls` Observable through AsyncPipe to loop -->
-<!--<li *ngFor="let poll of polls | async">-->
-  <li *ngFor="let poll of polls">
-    <span class="badge">{{ poll.id }}</span> {{ poll.title }}
-  </li>
-</ul>
