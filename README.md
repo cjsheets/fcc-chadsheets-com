@@ -1,21 +1,13 @@
-# Nightlife Coordination App
+# FreeCodeCamp - Project Landing Site
 
 ## Overview
 
-This app allows users to search for local venues, indicate their attendance, get directions
-and see each venues Yelp rating. The client leverages Angular v2.x and Typescript backed by 
-a Node.js REST API and MongoDB datastore.
-
-A demo version of this app is deployed at: [https://angular-nightlife.herokuapp.com](https://angular-nightlife.herokuapp.com)
+This site contains projects completed over the course of the Free Code Camp cirriculum.
+The client leverages Angular v2.x and Typescript backed by a Node.js/Express server and MongoDB datastore.
 
 ![](client/assets/image/app-screenshot.png?raw=true)
 
 Part of the [FreeCodeCamp](https://www.freecodecamp.com/cjsheets) curriculum based on the following user stories:
-
-* As an unauthenticated user, I can view all bars in my area.
-* As an authenticated user, I can add myself to a bar to indicate I am going there tonight.
-* As an authenticated user, I can remove myself from a bar if I no longer want to go there.
-* As an unauthenticated user, when I login I should not have to search again.
 
 ## Install
 

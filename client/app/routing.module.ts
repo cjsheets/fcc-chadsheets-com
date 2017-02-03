@@ -5,15 +5,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { WelcomeComponent } from './welcome/welcome.component';
+
 // Save space in the root module, export components here
 export const routedComponents = [
   AppComponent,
   HeaderComponent,
-  SidebarComponent
+  SidebarComponent,
+  WelcomeComponent
 ];
 
 const routes: Routes = [
-//  { path: 'login', component: LoginComponent },
+  { path: '', component: WelcomeComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

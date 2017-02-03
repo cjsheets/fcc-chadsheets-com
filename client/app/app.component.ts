@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.view.html',
-  styleUrls: ['./app.view.css']
+  templateUrl: './app.view.html'
 })
 
 export class AppComponent {
