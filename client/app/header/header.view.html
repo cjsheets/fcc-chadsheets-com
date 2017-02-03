@@ -1,11 +1,9 @@
 <nav id="header-component" class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-      <span class="site-logo">
-        <span class="site-logo-dotcom">{{prePageTitle}}</span><a 
-        title="Chad Sheets - Personal Blog" 
-        href="https://chadsheets.com">{{pageTitle}}<span 
-        class="site-logo-dotcom">{{postPageTitle}}</span>
-        </a>
+      <span class="site-logo" [routerLink]="['/']">
+        <span class="site-logo-dotcom">{{prePageTitle}}</span><span 
+        class="site-logo-main">{{pageTitle}}</span>
+        <span class="site-logo-dotcom">{{postPageTitle}}</span>
       </span>
       <ul id="top-right-nav">
         <li class="dropdown">
@@ -19,7 +17,7 @@
             <li><a href="#">Separated link</a></li>-->
           </ul>
         </li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="https://blog.chadsheets.com">Blog</a></li>
       </ul>
   </div>
 </nav>

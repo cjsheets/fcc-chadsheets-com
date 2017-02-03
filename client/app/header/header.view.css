@@ -10,9 +10,10 @@
 .site-logo {
   z-index: 10;
   font-family: 'Titillium Web', sans-serif;
-  padding-left: 30px;}
+  padding-left: 30px;
+  cursor: pointer;}
 
-.site-logo a:link, .site-logo a:visited, .site-logo a:hover {
+.site-logo-main {
   text-decoration: none;
   color: #FFFFFF;
   line-height: 46px;
