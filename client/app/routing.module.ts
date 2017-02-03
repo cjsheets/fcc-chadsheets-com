@@ -1,11 +1,13 @@
 import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HeaderComponent } from './app-header.component';
-import { SidebarComponent } from './app-sidebar.component';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 // Save space in the root module, export components here
 export const routedComponents = [
+  AppComponent,
   HeaderComponent,
   SidebarComponent
 ];

@@ -1,17 +1,21 @@
 import { NgModule, ErrorHandler }  from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { Logger, ConsoleLogService } from './logger.service';
-import { RavenErrorHandler } from './sentry-io';
+
+import { RavenErrorHandler } from './sentry-io.service';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports : [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ 
     { provide: Logger, useClass: ConsoleLogService },
