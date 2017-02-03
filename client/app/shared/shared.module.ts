@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 import { Logger, ConsoleLogService } from './logger.service';
 
 import { RavenErrorHandler } from './sentry-io.service';
@@ -16,6 +17,10 @@ import { RavenErrorHandler } from './sentry-io.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    ScrollspyComponent,
+  ],
+  declarations: [
+    ScrollspyComponent,
   ],
   providers: [ 
     { provide: Logger, useClass: ConsoleLogService },

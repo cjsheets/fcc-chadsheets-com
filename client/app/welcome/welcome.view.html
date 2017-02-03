@@ -1,70 +1,44 @@
-  <div class="row scroll-container">
-    <div class="col-md-9">
-      <div class="container pages" id="content">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="well page active content" id="about">
-              <!-- Reset Indent -->
+<div class="row scroll-container">
+  <div class="col-md-9">
+    <div class="container pages" id="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="well page active content" id="about">
+            <!-- Reset Indent -->
 
-<a name="top-anchor"></a>
-<section id="image-search">
-  <h2>Image Search API</h2>
-  <p>This application abstracts a Google Custom Search Engine (CSE) into a simple
-    API for image searches. 
-  </p>
-  <p>
-    <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
+            <a name="top-anchor"></a>
+            <section id="image-search">
+              <h2>Image Search API</h2>
+              <p>This application abstracts a Google Custom Search Engine (CSE) into a simple API for image searches.
+              </p>
+              <p>
+                <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
       Additional Info
     <div class="ripple-container"></div></a>
-  </p>
-  <br><br>
-  <hr>
-  <section id="try-it">
-    <h3>See It In Action</h3>
-    
-      <p>Enter a search term to see what the API returns.
-      </p>
+              </p>
+              <br><br>
+              <hr>
+              <section id="try-it">
+                <h3>See It In Action</h3>
 
-      <hr>
-              <!-- Begin Application -->
+                <p>Enter a search term to see what the API returns.
+                </p>
+
+                <hr>
+                <!-- Begin Application -->
 
 
 
-              <!-- End Application -->
-   </section>
+                <!-- End Application -->
+              </section>
 
-  </section>
-    
-              <!-- /Reset Indent -->
-            </div>
+            </section>
+
+            <!-- /Reset Indent -->
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 scrollspy">
-        <ul id="navspy" class="nav hidden-xs hidden-sm navspy" data-spy="affix">
-          <li><a href="#image-search">Search API</a>
-            <ul class="nav navspy">
-              <li><a href="#try-it">In Action</a></li>
-              <li><a href="#search-details">Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#latest">Recent API</a>
-            <ul class="nav navspy">
-              <li><a href="#try-latest">In Action</a></li>
-              <li><a href="#latest-details">Details</a></li>
-            </ul>
-          </li>
-          <li><a href="#more-information">Additional Info</a>
-            <ul class="nav navspy">
-              <li><a href="#limitations">Limitations</a></li>
-              <li><a href="#user-story">User Story</a></li>
-              <li><a href="#to-do">ToDo</a></li>
-            </ul>
-          </li>
-        <li style="padding-top: 10px;"><a href="#top-anchor">Back to Top</a></li>
-        </ul>
-    </div>
-
-
   </div>
+  <scrollspy [scrollNav]="scrollNav"></scrollspy>
+</div>
