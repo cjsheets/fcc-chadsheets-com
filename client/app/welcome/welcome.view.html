@@ -1,44 +1,99 @@
-<div class="row scroll-container">
-  <div class="col-md-9">
-    <div class="container pages" id="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="well page active content" id="about">
-            <!-- Reset Indent -->
+<div class="col-md-9">
+  <div class="container pages" id="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well page active content" id="about">
+          <!-- Reset Indent -->
 
-            <a name="top-anchor"></a>
-            <section id="image-search">
-              <h2>Image Search API</h2>
-              <p>This application abstracts a Google Custom Search Engine (CSE) into a simple API for image searches.
-              </p>
-              <p>
-                <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
-      Additional Info
-    <div class="ripple-container"></div></a>
-              </p>
-              <br><br>
-              <hr>
-              <section id="try-it">
-                <h3>See It In Action</h3>
+<a name="top-anchor"></a>
+<section id="image-search">
+  <h2>Welcome!</h2>
+  <p>I wrote this Angular2 app to track my progress through the FreeCodeCamp ciriculum.
+    See the project list for my projects and solutions.
+  </p>
+  <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
+    Additional Info <div class="ripple-container"></div>
+  </a>
 
-                <p>Enter a search term to see what the API returns.
-                </p>
+  <br><br>
+  <hr>
 
-                <hr>
-                <!-- Begin Application -->
+  <section id="try-it">
+    <h2>Project List</h2>
+    <p>For a full list of FCC Projects, see 
+      <a href="https://www.freecodecamp.com/cjsheets">my profile</a>.
+    </p>
+    <ul>
+      <li>Build a Personal Portfolio Webpage</li>
+      <li>Build a Random Quote Machine</li>
+      <li>Show the Local Weather</li>
+      <li>Build a Wikipedia Viewer</li>
+      <li>Use the Twitchtv JSON AP</li>
+      <li>Build a JavaScript Calculato</li>
+      <li>Build a Pomodoro Clock</li>
+      <li>Build a Simon Game</li>
+      <li>Build a Tic Tac Toe Game</li>
+      <li>Build a Markdown Previewer</li>
+      <li>Build a Camper Leaderboard</li>
+      <li>Build a Recipe Box</li>
+      <li>Build the Game of Life</li>
+      <li>Build a Roguelike Dungeon Crawler Game</li>
+      <li>Visualize Data with a Bar Char</li>
+      <li>Visualize Data with a Scatterplot Grap</li>
+      <li>Visualize Data with a Heat Map</li>
+      <li>Show National Contiguity with a Force Directed Graph</li>
+      <li>Map Data Across the Globe</li>
+      <li>Timestamp Microservice</li>
+      <li>Request Header Parser Microservice</li>
+      <li>URL Shortener Microservice</li>
+      <li>Image Search Abstraction Layer</li>
+      <li [routerLink]="['/project/File-Metadata-Microservice']" class="project-link">
+        File Metadata Microservice</li>
+      <li>Build a Voting App</li>
+      <li>Build a Nightlife Coordination App</li>
+      <li>Chart the Stock Market</li>
+      <li>Build a Pinterest Clon</li>
+      <li>Manage a Book Trading Club</li>
+    </ul>
+    <hr>
+    
+  </section>
 
+  <section id="try-it">
+    <h2>About This Site</h2>
+    <p>
+      This site is open source and available on 
+      <a href="https://github.com/cjsheets/fcc.chadsheets.com">GitHub</a>. Most
+      of the projects are either contained in their own repository, are
+      grouped into an umbrella repository, or are available on a code-posting
+      site like CodePen.
+    </p>
 
+    <hr>
+    
+    <h3>License</h3>
+    <p>
+      The Free Code Camps cirriculum is available under an <a href="https://github.com/freeCodeCamp/freeCodeCamp/blob/staging/LICENSE-freeCodeCamp-Curriculum.md">
+      Attribution-ShareAlike 4.0 International</a> license. The platform is available
+      on GitHub under a BSD 3-Clause License.
+    </p>
+    <p>
+      My personal projects and solutions are available under an MIT license. Obviously,
+      any library or borrowed code used retains its creators license.
+    </p>
+    
 
-                <!-- End Application -->
-              </section>
+    <hr>
+    
+  </section>
 
-            </section>
+</section>
 
-            <!-- /Reset Indent -->
-          </div>
+          <!-- /Reset Indent -->
         </div>
       </div>
     </div>
   </div>
-  <scrollspy [scrollNav]="scrollNav"></scrollspy>
 </div>
+
+<scrollspy [scrollNav]="scrollNav"></scrollspy>

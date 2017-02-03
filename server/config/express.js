@@ -8,8 +8,6 @@ var path            = require('path');
 var logger          = require('morgan');
 var cookieParser    = require('cookie-parser');
 var bodyParser      = require('body-parser');
-var passport        = require('passport');
-var passportConfig  = require('./passport');
 var mongoose        = require('mongoose');
 var morgan          = require('morgan');
 var flash           = require('connect-flash');
@@ -43,14 +41,6 @@ app.use(validator());
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs'); // set up ejs for templating
 
-debug('Initialie passport for authentication');
-app.use(session({
-  secret              : env.express.session_secret,
-  resave              : true,
-  saveUninitialized   : true }));
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(express.static(path.join(__dirname, '../../dist')));
 
 

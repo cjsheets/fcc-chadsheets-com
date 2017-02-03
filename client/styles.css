@@ -182,3 +182,18 @@ section:before {
   border-color: #cbf0bb;
   color: #4c8f31;
 }
+
+
+
+.project-link {
+  color: #18a4eb;
+}
+
+.project-link:hover {
+  color: #18a4eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+ .iframe-container {
+  background:url(/assets/img/site-background-loading-iframe.jpg) center center no-repeat;
+ }

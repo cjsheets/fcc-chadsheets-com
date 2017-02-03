@@ -5,7 +5,7 @@
 This site contains projects completed over the course of the Free Code Camp cirriculum.
 The client leverages Angular v2.x and Typescript backed by a Node.js/Express server and MongoDB datastore.
 
-![](client/assets/image/app-screenshot.png?raw=true)
+![](client/assets/img/app-screenshot.png?raw=true)
 
 Written in addition to the [FreeCodeCamp](https://www.freecodecamp.com/cjsheets) curriculum.
 
