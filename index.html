@@ -15,55 +15,73 @@ scrollNav: [
 
 <a name="top-anchor"></a>
 <section id="image-search">
-  <h2>Welcome!</h2>
-  <p>I wrote this Angular2 app to track my progress through the FreeCodeCamp ciriculum.
-    See the project list for my projects and solutions.
+  <h2>Projects - FreeCodeCamp</h2>
+  <p>Welcome! My name is Chad and I built this site to track my progress through the 
+    FreeCodeCamp ciriculum.
   </p>
-  <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
-    Additional Info <div class="ripple-container"></div>
-  </a>
-
-  <br><br>
-  <hr>
+  <a type="button" href="https://github.com/cjsheets/{{page.git-repo}}" target="_blank"
+    class="btn btn-raised btn-secondary btn-sm pull-right btn-description">
+    Git Repository<div class="ripple-container"></div></a>
+  <a type="button" href="#more-info" 
+    class="btn btn-raised btn-secondary btn-sm pull-right btn-description">
+    Additional Info<div class="ripple-container"></div></a>
+  <div class="clearfix"></div>
 
   <section id="try-it">
-    <h2>Project List</h2>
     <p>For a full list of FCC Projects, see 
       <a href="https://www.freecodecamp.com/cjsheets">my profile</a>.
     </p>
-    <ul>
-      <li>Build a Personal Portfolio Webpage</li>
-      <li>Build a Random Quote Machine</li>
-      <li>Show the Local Weather</li>
-      <li>Build a Wikipedia Viewer</li>
-      <li>Use the Twitchtv JSON AP</li>
-      <li>Build a JavaScript Calculato</li>
-      <li>Build a Pomodoro Clock</li>
-      <li>Build a Simon Game</li>
-      <li>Build a Tic Tac Toe Game</li>
-      <li>Build a Markdown Previewer</li>
-      <li>Build a Camper Leaderboard</li>
-      <li>Build a Recipe Box</li>
-      <li>Build the Game of Life</li>
-      <li>Build a Roguelike Dungeon Crawler Game</li>
-      <li>Visualize Data with a Bar Char</li>
-      <li>Visualize Data with a Scatterplot Grap</li>
-      <li>Visualize Data with a Heat Map</li>
-      <li>Show National Contiguity with a Force Directed Graph</li>
-      <li>Map Data Across the Globe</li>
-      <li>Timestamp Microservice</li>
-      <li>Request Header Parser Microservice</li>
-      <li>URL Shortener Microservice</li>
-      <li>Image Search Abstraction Layer</li>
-      <li><a href='/project/file-metadata'>File Metadata Microservice</a></li>
-      <li>Build a Voting App</li>
-      <li>Build a Nightlife Coordination App</li>
-      <li>Chart the Stock Market</li>
-      <li>Build a Pinterest Clon</li>
-      <li>Manage a Book Trading Club</li>
+    <ul class="project-list-topic">
+      <li>Full Stack</li>
+      <ul class="project-list-category">
+        <li><a href='/project/voting-app'>Build a Voting App</a></li>
+        <li><a href='/project/nightlife-coordination'>Build a Nightlife Coordination App</a></li>
+        <li><a href='/project/stock-market'>Chart the Stock Market</a></li>
+        <li><a href='/project/pinterest-clone'>Build a Pinterest Clon</a></li>
+        <li><a href='/project/trading-club'>Manage a Book Trading Club</a></li>
+      </ul>
+      <li>Back End - API</li>
+      <ul class="project-list-category">
+        <li><a href='/project/timestamp'>Timestamp Microservice</a></li>
+        <li><a href='/project/'>Request Header Parser Microservice</a></li>
+        <li><a href='/project/'>URL Shortener Microservice</a></li>
+        <li><a href='/project/'>Image Search Abstraction Layer</a></li>
+        <li><a href='/project/'>File Metadata Microservice</a></li>
+      </ul>
+      <li>Data Vis. - D3.js</li>
+      <ul class="project-list-category">
+        <li><a href='/project/'>Visualize Data with a Bar Char</a></li>
+        <li><a href='/project/'>Visualize Data with a Scatterplot Grap</a></li>
+        <li><a href='/project/'>Visualize Data with a Heat Map</a></li>
+        <li><a href='/project/'>Show National Contiguity with a Force Directed Graph</a></li>
+        <li><a href='/project/'>Map Data Across the Globe</a></li>
+      </ul>
+      <li>Data Vis. - React</li>
+      <ul class="project-list-category">
+        <li><a href='/project/'>Build a Markdown Previewer</a></li>
+        <li><a href='/project/'>Build a Camper Leaderboard</a></li>
+        <li><a href='/project/'>Build a Recipe Box</a></li>
+        <li><a href='/project/'>Build the Game of Life</a></li>
+        <li><a href='/project/'>Build a Roguelike Dungeon Crawler Game</a></li>
+      </ul>
+      <li>Front End - Advanced</li>
+      <ul class="project-list-category">
+        <li><a href='/project/'>Build a JavaScript Calculato</a></li>
+        <li><a href='/project/'>Build a Pomodoro Clock</a></li>
+        <li><a href='/project/'>Build a Simon Game</a></li>
+        <li><a href='/project/'>Build a Tic Tac Toe Game</a></li>
+      </ul>
+      <li>Front End</li>
+      <ul class="project-list-category">
+        <li><a href='/project/'>Build a Personal Portfolio Webpage</a></li>
+        <li><a href='/project/'>Build a Random Quote Machine</a></li>
+        <li><a href='/project/'>Show the Local Weather</a></li>
+        <li><a href='/project/'>Build a Wikipedia Viewer</a></li>
+        <li><a href='/project/'>Use the Twitchtv JSON AP</a></li>
+      </ul>
     </ul>
-    <hr>
     
+    <hr>
   </section>
 
   <section id="try-it">

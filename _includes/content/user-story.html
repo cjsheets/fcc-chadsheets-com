@@ -1,0 +1,13 @@
+{% if page.toDo %}
+<section id="user-story">
+  <h3>User Story</h3>
+  <p>
+    The following user stories were the basis for this application:
+  </p>
+  <ol>
+    {% for t in page.userStory %}
+    <li>{{t}}</li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}

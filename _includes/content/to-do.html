@@ -1,0 +1,10 @@
+{% if page.toDo %}
+<section id="to-do">
+  <h2>ToDo</h2>
+  <ul>
+    {% for t in page.toDo %}
+    <li>{{t}}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
