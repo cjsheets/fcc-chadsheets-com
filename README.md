@@ -50,6 +50,7 @@ Some rely on Node and others are hosted on PaaS providers.
 
 ### To-Do:
 
+* Scrollspy doesn't initialize after router navigation
 * add libraries used in code
 
 ### License
