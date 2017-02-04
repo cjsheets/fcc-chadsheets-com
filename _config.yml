@@ -1,0 +1,17 @@
+title: Chad Sheets | FreeCodeCamp
+email: hello@chadsheets.com
+description: Chad Sheets (cjsheets) - FreeCodeCamp Solutions
+#url: https://chadsheets.com
+url: http://localhost:4000
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

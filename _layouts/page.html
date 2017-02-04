@@ -1,0 +1,183 @@
+<!doctype html>
+<head>
+{% include head.html %}
+</head>
+
+<body id="app-root"  data-spy="scroll" data-target=".scrollspy" style="margin-top: 50px">
+<nav id="header-component" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+      <span class="site-logo">
+        <span class="site-logo-dotcom">fcc.</span><span 
+        class="site-logo-main">ChadSheets</span>
+        <span class="site-logo-dotcom">.com</span>
+      </span>
+      <ul id="top-right-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FCC Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>Coming Soon</li>
+            <!--<li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>-->
+          </ul>
+        </li>
+        <li><a href="https://blog.chadsheets.com">Blog</a></li>
+      </ul>
+  </div>
+</nav>
+
+
+
+<div class="nav-side-menu">
+     <span class="mobile-menu-toggle-btn" data-toggle="collapse" data-target="#menu-content"><i class="zmdi zmdi-menu"></i></span>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li>
+                <a href="#">
+                  <i class="zmdi zmdi-home"></i> Main
+                </a>
+            </li>
+            <li class="collapsed">
+                <a href="#">
+                  <i class="zmdi zmdi-library"></i> Libraries
+                </a>
+            </li>
+            <li class="collapsed">
+                <a href="#">
+                    <i class="zmdi zmdi-github-alt"></i> Github
+                </a>
+            </li>
+            <li data-toggle="collapse" data-target="#share" class="collapsed">
+                <a href="#"><i class="zmdi zmdi-share"></i> Share </a>
+                <span class="arrow"><i class="zmdi zmdi-chevron-down"></i></span>
+            </li>
+            <ul class="sub-menu collapse" id="share">
+                <li>
+                <a href="#"><i class="zmdi zmdi-caret-right"></i> Twitter</a></li>
+                <li><a href="#"><i class="zmdi zmdi-caret-right"></i> Facebook</a></li>
+                <li><a href="#"><i class="zmdi zmdi-caret-right"></i> Google+</a></li>
+                <li><a href="#"><i class="zmdi zmdi-caret-right"></i> LinkedIn</a></li>
+            </ul>
+            <li>
+                <a href="#"><i class="zmdi zmdi-comments"></i> Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main>
+  <div class="container" id="main">
+    <div class="row scroll-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-9">
+  <div class="container pages" id="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well page active content" id="about">
+          <!-- Reset Indent -->
+
+ {{ content }}
+
+          <!-- /Reset Indent -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-3 scrollspy">
+        <ul id="navspy" class="nav hidden-xs hidden-sm navspy" data-spy="affix">
+          <li><a href="#file-metadata">File Metadata</a>
+            <ul class="nav navspy">
+              <li><a href="#try-it">In Action</a></li>
+            </ul>
+          </li>
+          <li><a href="#more-information">Additional Info</a>
+            <ul class="nav navspy">
+              <li><a href="#limitations">Limitations</a></li>
+              <li><a href="#user-story">User Story</a></li>
+              <li><a href="#to-do">ToDo</a></li>
+            </ul>
+          </li>
+        <li style="padding-top: 10px;"><a href="#top-anchor">Back to Top</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    <div class="row">
+      <footer class="col-xs-12 application">
+        <div class="container" id="footer">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3>About Myself</h3>
+              <p style="padding: 20px 20px 5px;">Hi, My name is Chad! I'm an engineer, 
+                a hobbiest programmer and a web developer.</p>
+              <p style="padding: 5px 20px;">Between 2016-2017 I spent my free time learning
+                Node, React and Angular through the FreeCodeCamp Cirriculum. This site
+                contains many of my solutions from those projects.
+              </p><p style="padding: 5px 20px;">You can learn more about me from my 
+                <a href="https://chadsheets.com">Portfolio</a> or <a
+                href="blog.chadsheets.com">Blog</a>.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <h3>About FreeCodeCamp</h3>
+              <p style="padding: 20px 20px 5px;">Free Code Camp is an open-source
+                web development platform and community of aspiring developers.</p>
+              <p style="padding: 5px 20px;">Beyond offering projects and problems
+                to teach people to code, FCC also performs pro-bono projects for
+                non-profit orginizations.
+              </p><p style="padding: 5px 20px;">For more information, see their 
+                official <a href="https://www.freecodecamp.com/about/">About</a> section.
+              </p>
+            </div>
+          </div><!--end of .row-->
+        </div><!--end of .container-->
+      </footer> 
+    </div><!--end of .row-->
+  </div><!--end of .container-->
+</main>
+</body>
+</html>

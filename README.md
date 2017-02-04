@@ -2,60 +2,72 @@
 
 ## Overview
 
-This site contains projects completed over the course of the Free Code Camp cirriculum.
-The client leverages Angular v2.x and Typescript backed by a Node.js/Express server and MongoDB datastore.
+This site contains projects I completed over the course of the Free Code Camp cirriculum.
 
-![](client/assets/img/app-screenshot.png?raw=true)
+![](assets/img/site-screenshot.jpg?raw=true)
 
-Written in addition to the [FreeCodeCamp](https://www.freecodecamp.com/cjsheets) curriculum.
+The site is statically compiled using Jekyll and npm. NPM dependencies are required in production 
+so either setup a hook to pull them or move the files referenced in `Gruntfile.js` and `main.css` 
+from /node_modules/ to /assets/.
+
 
 ## Install
 
-Clone this repository and install npm dependencies:
+First ensure Jekyll and bundler are installed:
+
+```
+gem install jekyll bundler
+
+```
+
+Clone this repository and install ruby and npm dependencies:
 
 ```
 git clone git@github.com:cjsheets/fcc.chadsheets.com.git
 cd fcc.chadsheets.com
+bundle install
 npm install
 ```
 
 ## Run
 
-First, start the Node.js server in development mode:
+Use Grunt to monitor javascript for changes:
 
 ```
-npm run express-dev
+grunt -v dev
 ```
 
-For client development, use angular-cli to launch the app:
+For Jekyll development, simply run:
 
 ```
-ng serve
+bundle exec jekyll serve
 ```
 
-Navigate to `http://localhost:4200`
+Navigate to `http://localhost:4000`
 
-For server development, build the client to `/dist`:
 
-```
-ng build
-```
-
-Navigate to `http://localhost:5000`
 
 ## Technology Stack
 
 See linked repositories for app-specific technology stacks. Some use Angular, others React.
 Some rely on Node and others are hosted on PaaS providers.
 
+This package contains:
+
+| Front-End | Back-End |
+| ------- | ------- |
+| Jekyll | Nginx |
+| Bootstrap | npm |
+| HTML5/SCSS | Cloudflare |
+| Grunt | Formspree |
+ 
 ### To-Do:
 
-* Scrollspy doesn't initialize after router navigation
 * add libraries used in code
 
 ### License
 
 MIT License
 
-[![Analytics](https://cjs-beacon.appspot.com/UA-10006093-3/github/cjsheets/fcc-chadsheets-com?pixel)](https://github.com/cjsheets/fcc-chadsheets-com)
 
+[![Analytics](https://cjs-beacon.appspot.com/UA-10006093-3/github/cjsheets/fcc-chadsheets-com?pixel)](https://github.com/cjsheets/fcc-chadsheets-com)
