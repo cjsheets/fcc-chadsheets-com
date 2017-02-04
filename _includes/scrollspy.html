@@ -1,0 +1,18 @@
+<div class="col-md-3 scrollspy">
+    {% if page.scrollNav %}
+    <ul id="navspy" class="nav hidden-xs hidden-sm navspy" data-spy="affix">
+      {% for nav in page.scrollNav %}
+      <li><a href="#{{nav.h}}">{{nav.v}}</a>
+      {% if nav.s %}
+        <ul class="nav navspy">
+          {% for subLink in nav.s %}
+          <li><a href="#{{subLink.h}}">{{subLink.v}}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </li>
+      {% endfor %}
+      <li style="padding-top: 10px;"><a href="#top-anchor">Back to Top</a></li>
+    </ul>
+     {% endif %}
+</div>

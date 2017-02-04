@@ -1,5 +1,17 @@
 ---
 layout: page
+site-url: 'https://m3ta.herokuapp.com'
+git-repo: 'node-file-metadata-microservice'
+scrollNav: [
+  {h: 'project-title', v: 'File Metadata', s: [
+    {h: 'try-it', v: 'In Action'}
+  ]},
+  {h: 'more-information', v: 'Additional Info', s: [
+    {h: 'limitations', v: 'Limitations'},
+    {h: 'user-story', v: 'User Story'},
+    {h: 'to-do', v: 'To-Do'}
+  ]},
+]
 ---
 
 <a name="top-anchor"></a>
@@ -8,6 +20,11 @@ layout: page
   <p>This microservice displays file metadata at different stages of an upload.
   </p>
   <p>
+    <a type="button" href="https://github.com/cjsheets/{{page.git-repo}}"
+      class="btn btn-raised btn-secondary btn-sm pull-right" target="_blank">
+      Git Repository
+    <div class="ripple-container"></div></a>
+    &nbsp;
     <a type="button" href="#more-info" class="btn btn-raised btn-secondary btn-sm pull-right">
       Additional Info
     <div class="ripple-container"></div></a>
@@ -19,7 +36,7 @@ layout: page
       <p>Upload a file to test metadata inspection. <i>(Hosted externally for security)</i>
       </p>
       <div class="iframe-container">
-        <iframe src="https://m3ta.herokuapp.com" 
+        <iframe src="{{page.site-url}}" 
         width="100%" height="600px" frameborder="0"
         marginwidth="0" marginheight="0"></iframe>
       </div>
