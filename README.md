@@ -63,7 +63,8 @@ This package contains:
  
 ### To-Do:
 
-* add libraries used in code
+* fix horizontal scroll
+* fix header underline
 
 ### License
 

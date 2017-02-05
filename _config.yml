@@ -1,8 +1,7 @@
 title: Chad Sheets | FreeCodeCamp
 email: hello@chadsheets.com
 description: Chad Sheets (cjsheets) - FreeCodeCamp Solutions
-#url: https://chadsheets.com/fcc.chadsheets.com/
-url: /
+url: ''
 
 sass:
   sass_dir: _sass

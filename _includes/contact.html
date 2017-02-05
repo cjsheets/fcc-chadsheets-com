@@ -1,0 +1,23 @@
+<form class="contact-form" action="https://formspree.io/cjsheets@gmail.com"
+  method="POST" id="contactForm">
+  <div class="contact-form-row">
+    <input class="contact-field" type="text" name="name" required placeholder="Name">
+    <input class="contact-field" type="email" name="email" required placeholder="E-mail">
+  </div>
+  <div class="contact-form-row">
+    <textarea class="contact-field" rows="7" name="message" required placeholder="Message"></textarea>
+  </div>
+  <div class="contact-form-row contact-form-row-submit">
+    <!--<div id="recaptcha" class="contact-captcha">
+      <div class="g-recaptcha" data-sitekey="6LfTyBMUAAAAAI9zCFG29_BqXjVBdQgaVwSO9Vt2"></div>
+    </div>-->
+    <div class="contact-submit-box">
+      <button type="submit" class="button button-big contact-submit">Send Message</button>
+      <div class="contact-feedback js-contact-output">
+        <div class="contact-alert contact-alert-loading js-loading" style="display: none;">Sending message…</div>
+        <div class="contact-alert contact-alert-success js-success" style="display: none;">Message sent!</div>
+        <div class="contact-alert contact-alert-error js-error" style="display: none;">Ops, there was an error.</div>
+      </div>
+    </div>
+  </div>
+</form>
