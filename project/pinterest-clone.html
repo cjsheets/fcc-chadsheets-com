@@ -1,20 +1,22 @@
 ---
 layout: page
-title: 'File Metadata Microservice'
+title: 'Build a Pinterest Clone'
 description: 'This microservice displays file metadata at different stages of an upload.'
-site-url: 'https://m3ta.herokuapp.com'
-git-repo: 'node-file-metadata-microservice'
+site-url: 'https://angular-pinterest.firebaseapp.com/ap'
+git-repo: 'angular-pinterest-app'
 userStory:
-  - 'I can submit a FormData object that includes a file upload.'
-  - 'When I submit something, I will receive the file size in bytes within the JSON response'
+  - 'As an unauthenticated user, I can login with Twitter.'
+  - 'As an authenticated user, I can link to images.'
+  - 'As an authenticated user, I can delete images that Ive linked to.'
+  - 'As an authenticated user, I can see a Pinterest-style wall of all the images Ive linked to.'
+  - 'As an unauthenticated user, I can browse other users walls of images.'
+  - 'As an authenticated user, if I upload an image that is broken, it will be replaced by a placeholder image. (can use jQuery broken image detection)'
 toDo:
-  - 'Add support for multiple files'
-  - 'Improve form validation'
-  - 'Improve server side error message handling'
-  - 'Add notifications to interface'
-  - 'Rewrite footer'
+  - 'bug: investigate auth: null'
+  - 'apply linter to code in all projects'
+  - 'load pins automatically after clicking logout'
 scrollNav: [
-  {h: 'project-title', v: 'File Metadata', s: [
+  {h: 'project-title', v: 'Pinterest Clone', s: [
     {h: 'try-it', v: 'In Action'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
@@ -43,12 +45,13 @@ scrollNav: [
   <section id="try-it">
     <h3>See It In Action</h3>
     <p>
-      Upload a file to test metadata inspection.
-      <i class="hosted-externally">(Hosted externally)</i>
+      Attach an image.
+      <i class="hosted-externally">(External Link)</i>
     </p>
-      <div class="iframe-container">
-        <iframe src="{{page.site-url}}" class="demo-iframe"
-          frameborder="0" marginwidth="0" marginheight="0"></iframe>
+      <div class="sample-img-container">
+        <a href="{{page.site-url}}" target="_blank">
+          <img src="/assets/img/project-pinterest-app.png" class="sample-img">
+        </a>
       </div>
   </section>
 
@@ -59,22 +62,21 @@ scrollNav: [
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    The query string is mandatory, the offset and count are optional. The default
-    count is 10 with an offset of 0.
+    See the git repository for additional information.
   </p>
 
   <section id="limitations">
     <h3>Use Limitations</h3>
     <p>
-      This application makes use of Herokus free tier. Accordingly,
+      This application makes use of Firebase free tier. Accordingly,
       the application is limited to:
     </p>
     <ul>
-      <li>18 hours / day of run time</li>
+      <li>Max 5 simultanious users</li>
     </ul>
     <h3>Input Limitations</h3>
     <p>
-      This service currently accepts only one file at a time.
+      Only links to images supported. Authentication required.
     </p>
   </section><!--end of #limitations-->
 

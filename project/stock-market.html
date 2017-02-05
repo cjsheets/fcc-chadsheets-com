@@ -1,20 +1,24 @@
 ---
 layout: page
-title: 'File Metadata Microservice'
-description: 'This microservice displays file metadata at different stages of an upload.'
-site-url: 'https://m3ta.herokuapp.com'
-git-repo: 'node-file-metadata-microservice'
+title: 'Chart the Stock Market'
+description: 'This app allows users to generate a chart of company 
+  daily closing values by selecting any number of companies and a 
+  date range. Using web sockets, the app propagates changes across all 
+  clients in real-time. The client leverages Angular v2.x and Typescript 
+  backed by a Node.js server, proxy and API.'
+site-url: 'https://angular-charts.herokuapp.com/'
+git-repo: 'angular-charts-app'
 userStory:
-  - 'I can submit a FormData object that includes a file upload.'
-  - 'When I submit something, I will receive the file size in bytes within the JSON response'
+  - 'I can view a graph displaying the recent trend lines for each added stock.'
+  - 'I can add new stocks by their symbol name.'
+  - 'I can remove stocks.'
+  - 'I can see changes in real-time when any other user adds or removes a stock. For this you will need to use Web Sockets.'
 toDo:
-  - 'Add support for multiple files'
-  - 'Improve form validation'
-  - 'Improve server side error message handling'
-  - 'Add notifications to interface'
-  - 'Rewrite footer'
+  - 'Add timeout function to undo changes that fail (either due to bug or API)'
+  - 'Improve error handling when API request fails'
+  - 'Improve response when multiple requests made before graph renders'
 scrollNav: [
-  {h: 'project-title', v: 'File Metadata', s: [
+  {h: 'project-title', v: 'Stock Market', s: [
     {h: 'try-it', v: 'In Action'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
@@ -43,7 +47,7 @@ scrollNav: [
   <section id="try-it">
     <h3>See It In Action</h3>
     <p>
-      Upload a file to test metadata inspection.
+      Try adding a stock.
       <i class="hosted-externally">(Hosted externally)</i>
     </p>
       <div class="iframe-container">
@@ -59,8 +63,7 @@ scrollNav: [
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    The query string is mandatory, the offset and count are optional. The default
-    count is 10 with an offset of 0.
+    See the git repository for additional information.
   </p>
 
   <section id="limitations">
@@ -74,7 +77,8 @@ scrollNav: [
     </ul>
     <h3>Input Limitations</h3>
     <p>
-      This service currently accepts only one file at a time.
+      This service utilizes Yahoos finance API at the free-tier with
+      associated limitations.
     </p>
   </section><!--end of #limitations-->
 

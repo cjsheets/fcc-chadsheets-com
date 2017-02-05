@@ -1,20 +1,22 @@
 ---
 layout: page
-title: 'File Metadata Microservice'
-description: 'This microservice displays file metadata at different stages of an upload.'
-site-url: 'https://m3ta.herokuapp.com'
-git-repo: 'node-file-metadata-microservice'
+title: 'Manage a Book Trading Club'
+description: 'This app allows users to search for, list and trade records 
+  from their personal collection. The client is written with Angular v2.x 
+  and Typescript backed by Meteor.js v1.4 for real-time database synchronization.'
+site-url: 'https://angular-trading.herokuapp.com/'
+git-repo: 'angular-trading-app'
 userStory:
-  - 'I can submit a FormData object that includes a file upload.'
-  - 'When I submit something, I will receive the file size in bytes within the JSON response'
+  - 'I can view all books posted by every user.'
+  - 'I can add a new book.'
+  - 'I can update my settings to store my full name, city, and state.'
+  - 'I can propose a trade and wait for the other user to accept the trade.'
 toDo:
-  - 'Add support for multiple files'
-  - 'Improve form validation'
-  - 'Improve server side error message handling'
-  - 'Add notifications to interface'
-  - 'Rewrite footer'
+  - 'lint the code for each app'
+  - 'write tests for each app'
+  - 'change notification icon for different trade states'
 scrollNav: [
-  {h: 'project-title', v: 'File Metadata', s: [
+  {h: 'project-title', v: 'Trading Club', s: [
     {h: 'try-it', v: 'In Action'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
@@ -59,8 +61,7 @@ scrollNav: [
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    The query string is mandatory, the offset and count are optional. The default
-    count is 10 with an offset of 0.
+    See the git repository for additional information.
   </p>
 
   <section id="limitations">
