@@ -1,20 +1,23 @@
 ---
 layout: page
-title: 'File Metadata Microservice'
-description: 'This microservice displays file metadata at different stages of an upload.'
-site-url: 'https://m3ta.herokuapp.com'
-git-repo: 'node-file-metadata-microservice'
+title: 'Build a Simon Game'
+description: 'This app plays a simple game of simon.'
+site-url: 'https://f-e-p.herokuapp.com/basic/simon'
+git-repo: 'front-end-projects/tree/master/basic/simon'
 userStory:
-  - 'I can submit a FormData object that includes a file upload.'
-  - 'When I submit something, I will receive the file size in bytes within the JSON response'
+  - 'I am presented with a random series of button presses.'
+  - 'Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.'
+  - 'I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.'
+  - 'If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.'
+  - 'I can see how many steps are in the current series of button presses.'
+  - 'If I want to restart, I can hit a button to do so, and the game will return to a single step.'
+  - 'I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.'
+  - 'I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.'
 toDo:
-  - 'Add support for multiple files'
-  - 'Improve form validation'
-  - 'Improve server side error message handling'
-  - 'Add notifications to interface'
-  - 'Rewrite footer'
+  - 'Re-Write in React'
+  - 'Use more rugged audio'
 scrollNav: [
-  {h: 'project-title', v: 'File Metadata', s: [
+  {h: 'project-title', v: 'Simon', s: [
     {h: 'try-it', v: 'In Action'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
@@ -43,7 +46,7 @@ scrollNav: [
   <section id="try-it">
     <h3>See It In Action</h3>
     <p>
-      Upload a file to test metadata inspection.
+      Classic Simon.
       <i class="hosted-externally">(Hosted externally)</i>
     </p>
       <div class="iframe-container">
@@ -59,8 +62,7 @@ scrollNav: [
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    The query string is mandatory, the offset and count are optional. The default
-    count is 10 with an offset of 0.
+    See the GitHub repo for additional information
   </p>
 
   <section id="limitations">
@@ -74,7 +76,7 @@ scrollNav: [
     </ul>
     <h3>Input Limitations</h3>
     <p>
-      This service currently accepts only one file at a time.
+      None
     </p>
   </section><!--end of #limitations-->
 

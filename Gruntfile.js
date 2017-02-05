@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   grunt.initConfig({
     jshint: {
@@ -16,6 +16,22 @@ module.exports = function(grunt) {
         '!assets/js/scripts.min.js'
       ]
     },
+    copy: {
+      main: {
+        files: [
+          {
+          expand: true, flatten: true,
+          src: [
+            'node_modules/bootstrap/dist/css/*.min.css',
+            'node_modules/bootstrap/dist/css/*.map',
+            'node_modules/bootstrap-material-design/dist/css/*.min.css',
+            'node_modules/bootstrap-material-design/dist/css/*.map'
+          ], 
+          dest: 'assets/css/', filter: 'isFile' 
+          },
+        ],
+      },
+    },
     uglify: {
       dist: {
         files: {
@@ -27,7 +43,7 @@ module.exports = function(grunt) {
             'assets/js/*.js',
             '!assets/js/scripts.min.js'
           ]
-        } 
+        }
       }
     },
     watch: {
@@ -35,7 +51,7 @@ module.exports = function(grunt) {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['uglify']
+        tasks: ['uglify', 'copy']
       }
     },
     clean: {
@@ -47,6 +63,7 @@ module.exports = function(grunt) {
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -54,6 +71,7 @@ module.exports = function(grunt) {
   // Register tasks
   grunt.registerTask('default', [
     'clean',
+    'copy',
     'uglify'
   ]);
   grunt.registerTask('dev', [

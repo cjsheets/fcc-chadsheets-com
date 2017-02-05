@@ -1,20 +1,20 @@
 ---
 layout: page
-title: 'File Metadata Microservice'
-description: 'This microservice displays file metadata at different stages of an upload.'
-site-url: 'https://m3ta.herokuapp.com'
-git-repo: 'node-file-metadata-microservice'
+title: 'Build a Recipe Box'
+description: 'This simple recipe box allows the storage and management of simple recipies.'
+site-url: 'https://f-e-p.herokuapp.com/react/recipe-box'
+git-repo: 'front-end-projects/tree/master/react/recipe-box'
 userStory:
-  - 'I can submit a FormData object that includes a file upload.'
-  - 'When I submit something, I will receive the file size in bytes within the JSON response'
+  - 'I can create recipes that have names and ingredients.'
+  - 'I can see an index view where the names of all the recipes are visible.'
+  - 'I can click into any of those recipes to view it.'
+  - 'I can edit these recipes.'
+  - 'I can delete these recipes.'
+  - 'All new recipes I add are saved in my browsers local storage. If I refresh the page, these recipes will still be there.'
 toDo:
-  - 'Add support for multiple files'
-  - 'Improve form validation'
-  - 'Improve server side error message handling'
-  - 'Add notifications to interface'
-  - 'Rewrite footer'
+  - 'none'
 scrollNav: [
-  {h: 'project-title', v: 'File Metadata', s: [
+  {h: 'project-title', v: 'Recipe Box', s: [
     {h: 'try-it', v: 'In Action'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
@@ -43,7 +43,7 @@ scrollNav: [
   <section id="try-it">
     <h3>See It In Action</h3>
     <p>
-      Upload a file to test metadata inspection.
+      Try it out.
       <i class="hosted-externally">(Hosted externally)</i>
     </p>
       <div class="iframe-container">
@@ -59,8 +59,7 @@ scrollNav: [
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    The query string is mandatory, the offset and count are optional. The default
-    count is 10 with an offset of 0.
+    See the GitHub repo for additional information
   </p>
 
   <section id="limitations">
@@ -74,7 +73,7 @@ scrollNav: [
     </ul>
     <h3>Input Limitations</h3>
     <p>
-      This service currently accepts only one file at a time.
+      None
     </p>
   </section><!--end of #limitations-->
 
