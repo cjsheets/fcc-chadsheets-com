@@ -9,10 +9,17 @@ userStory:
   - 'I can paginate through the responses by adding a ?offset=2 parameter to the URL.'
   - 'I can get a list of the most recently submitted search strings.'
 toDo:
-  - 'none'
+  - 'Add notifications'
+  - 'Add form validation'
+  - 'Improve server side error message handling'
 scrollNav: [
   {h: 'project-title', v: 'Image Search', s: [
     {h: 'try-it', v: 'In Action'}
+  ]},
+  {h: 'search-details', v: 'API Details'},
+  {h: 'search-details', v: 'API Details', s: [
+    {h: 'search-details', v: 'Search'},
+    {h: 'latest-details', v: 'Latest'}
   ]},
   {h: 'more-information', v: 'Additional Info', s: [
     {h: 'limitations', v: 'Limitations'},
@@ -40,7 +47,7 @@ scrollNav: [
   <section id="try-it">
     <h3>See It In Action</h3>
     <p>
-      Perform an image search.
+      Enter a search term to see what the API returns.
       <i class="hosted-externally">(Hosted externally)</i>
     </p>
       <div class="iframe-container">
@@ -53,25 +60,76 @@ scrollNav: [
 
 <hr>
 
+<section id="search-details">
+  <h3>Search API Details</h3>
+  <br>
+  <h5 style="text-align: center">GET /api/search?q=&lt;term&gt;[&o=&lt;number&gt;][&c=&lt;number&gt;]</h5>
+  <br>
+  <pre>
+
+    &#123;
+      "url": "https://site.org/path/to/image.jpg",
+      "thumbnail": "https://site.org/path/to/thumbnail.jpg",
+      "context": "https://site.org/path/to/original/page.html",
+      "snippet": "Context inforamtion about the image"
+    &#125;
+  </pre>
+</section><!--end of #search-details-->  
+
+<hr>
+
+<section id="latest-details">
+  <h3>Latest API Details</h3>
+  <br>
+  <h5 style="text-align: center">GET /api/latest</h5>
+  <br><pre>
+
+    &#123;
+      "term": "cat",
+      "date": "2016-11-20T04:26:47.353Z"
+    &#125;
+  </pre>
+</section><!--end of #search-details-->  
+
+<hr>
+
 <section id="more-information"><a name="more-info"></a>
   <h2>Additional Information</h2>
   <p>
-    See the GitHub repo for additional information
+    The API endpoints are accessable via GET request detailed above.
+  </p>
+  <p>
+    The query string is mandatory, the offset and count are optional. The default
+    count is 10 with an offset of 0.
   </p>
 
   <section id="limitations">
     <h3>Use Limitations</h3>
     <p>
-      This application makes use of Herokus free tier. Accordingly,
+      This application makes use of free tiers of Heroku and Google CSE. Accordingly,
       the application is limited to:
     </p>
     <ul>
+      <li>100 searches / day</li>
       <li>18 hours / day of run time</li>
     </ul>
     <h3>Input Limitations</h3>
     <p>
-      None
+      Acceptable inputs to the API include:
     </p>
+    <ul>
+      <li>query: Any string of letters and numbers</li>
+      <li>offset: Any integer between 1-99</li>
+      <li>count: Any integer between 1-10</li>
+    </ul>
+    <p>
+      The following API terms are also interchangable:
+    </p>
+    <ul>
+      <li>term || t || q =...</li>
+      <li>offset || o =...</li>
+      <li>count || c =...</li>
+    </ul>
   </section><!--end of #limitations-->
 
   {% include content/user-story.html %}
